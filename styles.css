@@ -1,10 +1,5 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
+  margin: 0;
   font-family: "Inter", sans-serif;
   background: #0a0f1a;
   color: #e5e7eb;
@@ -16,11 +11,6 @@ body {
   justify-content: space-between;
   padding: 20px 60px;
   border-bottom: 1px solid rgba(255,255,255,0.05);
-}
-
-.logo {
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 
 nav a {
@@ -35,84 +25,41 @@ nav a {
   display: flex;
   justify-content: space-between;
   padding: 120px 60px;
-  overflow: hidden;
+  height: 80vh;
 }
 
-/* GRID OVERLAY */
+/* GRID */
 .grid-overlay {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-                    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-image:
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
   background-size: 40px 40px;
-  z-index: 0;
 }
 
+/* CONTENT */
 .hero-content {
-  position: relative;
-  z-index: 1;
+  z-index: 2;
   max-width: 500px;
 }
 
 .hero h1 {
   font-size: 52px;
-  margin-bottom: 20px;
 }
 
 .hero p {
   color: #9ca3af;
-  margin-bottom: 30px;
+  margin: 20px 0;
 }
 
-.buttons button {
-  margin-right: 10px;
+/* CANVAS */
+#canvas-container {
+  width: 500px;
+  height: 500px;
 }
 
-/* VISUAL */
-.hero-visual {
-  position: relative;
-  z-index: 1;
-}
-
-.cube-wrapper {
-  position: relative;
-  width: 300px;
-  height: 300px;
-}
-
-/* 3D cube illusion */
-.cube {
-  width: 120px;
-  height: 120px;
-  background: linear-gradient(145deg, #e5e7eb, #6b7280);
-  transform: rotateX(60deg) rotateZ(45deg);
-  position: absolute;
-  top: 80px;
-  left: 80px;
-  box-shadow: 0 0 40px rgba(79,70,229,0.4);
-}
-
-/* scan animation */
-.scan-line {
-  position: absolute;
-  width: 100%;
-  height: 2px;
-  background: #4f46e5;
-  top: 0;
-  animation: scan 3s infinite;
-}
-
-@keyframes scan {
-  0% { top: 0; opacity: 0; }
-  50% { opacity: 1; }
-  100% { top: 100%; opacity: 0; }
-}
-
-/* SECTIONS */
-.section {
-  padding: 80px 60px;
-}
-
+/* CARDS */
 .cards {
   display: flex;
   gap: 20px;
@@ -125,32 +72,12 @@ nav a {
   flex: 1;
 }
 
-/* TECH STRIP */
-.tech-strip {
-  text-align: center;
-  padding: 40px;
-  color: #6b7280;
-}
-
-.line {
-  height: 1px;
-  background: rgba(255,255,255,0.1);
-  margin-bottom: 10px;
-}
-
-/* CTA */
-.cta {
-  text-align: center;
-  padding: 80px;
-}
-
 /* BUTTONS */
 .btn-primary {
   background: #4f46e5;
+  color: white;
   border: none;
   padding: 10px 20px;
-  color: white;
-  cursor: pointer;
 }
 
 .btn-outline {
@@ -158,22 +85,4 @@ nav a {
   background: transparent;
   color: #4f46e5;
   padding: 10px 20px;
-}
-
-/* FOOTER */
-footer {
-  text-align: center;
-  padding: 20px;
-  border-top: 1px solid rgba(255,255,255,0.05);
-}
-
-/* MOBILE */
-@media (max-width: 900px) {
-  .hero {
-    flex-direction: column;
-  }
-
-  .cards {
-    flex-direction: column;
-  }
 }
