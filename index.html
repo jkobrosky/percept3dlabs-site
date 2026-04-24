@@ -6,11 +6,8 @@
   <title>Percept3D Labs</title>
 
   <link rel="stylesheet" href="styles.css"/>
-
-  <!-- Inter font -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
 
-  <!-- Three.js CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r134/three.min.js"></script>
 </head>
 
@@ -19,38 +16,27 @@
 <header class="navbar">
   <div class="logo">PERCEPT3D</div>
   <nav>
-    <a href="#">Solutions</a>
-    <a href="#">Technology</a>
-    <a href="#">About</a>
-    <a href="#" class="btn-primary">Contact</a>
+    <a href="#solutions">Solutions</a>
+    <a href="#tech">Technology</a>
+    <a href="#about">About</a>
+    <a href="#contact" class="btn-primary">Contact</a>
   </nav>
 </header>
 
-<section class="hero">
-
-  <!-- Grid background -->
+<!-- HERO -->
+<section class="hero reveal">
   <div class="grid-overlay"></div>
 
-  <!-- Content -->
   <div class="hero-content">
     <h1>Perception-Driven<br>3D Systems</h1>
-    <p>
-      Intelligent fabrication and spatial computing systems
-      engineered for precision and scale.
-    </p>
-
-    <div class="buttons">
-      <button class="btn-primary">Explore Solutions</button>
-      <button class="btn-outline">Our Technology</button>
-    </div>
+    <p>Intelligent fabrication and spatial computing.</p>
   </div>
 
-  <!-- 3D Canvas -->
   <div id="canvas-container"></div>
-
 </section>
 
-<section class="section">
+<!-- SOLUTIONS -->
+<section id="solutions" class="section reveal">
   <h2>Capabilities</h2>
 
   <div class="cards">
@@ -66,12 +52,29 @@
 
     <div class="card">
       <h3>Spatial Systems</h3>
-      <p>Real-time modeling and simulation environments.</p>
+      <p>Real-time modeling and simulation.</p>
     </div>
   </div>
 </section>
 
-<section class="cta">
+<!-- TECHNOLOGY -->
+<section id="tech" class="section dark reveal">
+  <h2>Technology Stack</h2>
+  <p class="center">
+    AI pipelines • Real-time data • Geometry processing • Simulation engines
+  </p>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="section reveal">
+  <h2>About Percept3D</h2>
+  <p class="center">
+    We are building the next generation of perception-driven manufacturing systems.
+  </p>
+</section>
+
+<!-- CTA -->
+<section id="contact" class="cta reveal">
   <h2>Build with Percept3D</h2>
   <button class="btn-primary">Get in Touch</button>
 </section>
